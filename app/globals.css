@@ -30,7 +30,7 @@ button, a { -webkit-tap-highlight-color: transparent; }
 
 .container-shell { width: min(1240px, calc(100% - 32px)); margin-inline: auto; }
 .section-space { padding-block: clamp(76px, 10vw, 144px); }
-.display { font-size: clamp(3.5rem, 8.35vw, 7.7rem); line-height: .92; letter-spacing: -.042em; font-weight: 700; }
+.display { max-width: 100%; font-size: clamp(3.5rem, 6vw, 6rem); line-height: .92; letter-spacing: -.042em; font-weight: 700; }
 .section-title { font-size: clamp(2.55rem, 5.35vw, 5.15rem); line-height: 1; letter-spacing: -.033em; font-weight: 720; }
 .eyebrow { display: flex; align-items: center; gap: .8rem; color: var(--sapphire); font-size: .8rem; font-weight: 850; letter-spacing: .23em; text-transform: uppercase; }
 .eyebrow::before { content: ""; width: 32px; height: 1px; background: currentColor; }
@@ -64,6 +64,7 @@ main .font-extrabold { font-weight: 850; }
 
 @media (min-width: 1024px) {
   .hero-mesh > .container-shell { grid-template-columns: minmax(0, 1.05fr) minmax(410px, .7fr); gap: 4.5rem; }
+  .hero-mesh > .container-shell > div:first-child { min-width: 0; }
 }
 
 @media (max-width: 640px) {
